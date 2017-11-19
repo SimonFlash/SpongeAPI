@@ -25,6 +25,7 @@
 package org.spongepowered.api.block.tileentity.carrier;
 
 import org.spongepowered.api.item.inventory.Inventory;
+import org.spongepowered.api.world.Location;
 
 import java.util.Optional;
 
@@ -43,5 +44,12 @@ public interface Chest extends TileEntityCarrier {
      * @return The combined inventory, if available
      */
     Optional<Inventory> getDoubleChestInventory();
+
+    /**
+     * Returns the location of this chests neighbor forming a double chest, if available.
+     *
+     * @return The location of this chests neighbor, if available
+     */
+    Optional<Location> getDoubleChestLocation();
 
 }
